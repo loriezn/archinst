@@ -1,11 +1,17 @@
 # archinst
 
 Configure mkinitcpio by adding encrypt and btrfs hooks before filesystems.
+
 Add btrfs executable to binaries to be able to use btrfs-check if necessary.
+
 Then regenerate the ramfs.
+
 --> /etc/mkinitcpio.conf
-    BINARIES="/usr/bin/btrfs"
-    HOOKS="... block encrypt btrfs ... filesystems ..."
+
+BINARIES="/usr/bin/btrfs"
+
+HOOKS="... block encrypt btrfs ... filesystems ..."
+
 mkinitcpio -p linux
 
 Update the root password.
